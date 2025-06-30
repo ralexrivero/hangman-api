@@ -2,7 +2,7 @@ from wordfreq import top_n_list, zipf_frequency
 import random
 
 def cargar_palabras(lang="en", top_n=50000, min_len=5, max_len=10, min_freq=3.5):
-    lista = top_n_list(lang, n_top=top_n)
+    lista = top_n_list(lang, n=top_n)
     return [
         w for w in lista
         if min_len <= len(w) <= max_len and zipf_frequency(w, lang) >= min_freq
